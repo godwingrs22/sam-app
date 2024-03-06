@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: godwingrs22/setup-sam@v1.0-alpha
+      - uses: godwingrs22/setup-sam@v2.0
         with:
           use-installer: true
           github-token: ${{ secrets.TOKEN }}
