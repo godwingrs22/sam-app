@@ -11,7 +11,7 @@ jobs:
       - uses: godwingrs22/setup-sam@v2.0
         with:
           use-installer: true
-          github-token: ${{ secrets.TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -19,6 +19,8 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-2
       # Build inside Docker containers
-      #- run: sam build --use-container
+      # - run: sam build --use-container
       # Prevent prompts and failure when the stack is unchanged
-      #- run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+      # - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+    permissions:
+      contents: none
