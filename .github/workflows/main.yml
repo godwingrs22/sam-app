@@ -11,7 +11,6 @@ jobs:
       - uses: godwingrs22/setup-sam@v2.0
         with:
           use-installer: true
-          token: ${{ secrets.TOKEN }}
       - uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
